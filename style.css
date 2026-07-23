@@ -10,101 +10,90 @@ body {
     display: flex;
     height: 100vh;
     background-color: #ffffff;
-    overflow-x: hidden;
-}
-
-/* Left Side Background (Laptop view) */
-.left-bg {
-    flex: 1.2;
-    background: url('bg.jpg') no-repeat center center/cover;
-    background-color: #f8f9fa;
-}
-
-/* Right Side Container */
-.right-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    overflow-y: auto;
 }
 
-/* Top Branding */
-.brand-container {
-    text-align: center;
-    margin-bottom: 12px;
+.right-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.brand-logo-text {
-    font-size: 30px;
-    font-weight: bold;
-    color: #008a4e;
-    letter-spacing: -0.5px;
-}
-
-.welcome-sub {
-    font-size: 13px;
-    color: #333;
-    margin-top: 2px;
-}
-
-.services-text {
-    font-size: 12px;
-    color: #008a4e;
-    margin-top: 4px;
-    font-weight: 500;
-}
-
-/* Badges */
 .badge-container {
     display: flex;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .header-badge {
-    background-color: #fff3cd;
+    background-color: #ffeeba;
     color: #856404;
-    padding: 4px 10px;
+    padding: 5px 15px;
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
-    border: 1px solid #ffeeba;
 }
 
 .sub-badge {
     background-color: #e2e3e5;
     color: #383d41;
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 4px;
     font-size: 11px;
     font-weight: 600;
-    border: 1px solid #d6d8db;
 }
 
-/* Form Styles */
+.brand-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.brand-logo-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.welcome-sub {
+    font-size: 13px;
+    color: #666;
+    margin: 3px 0;
+}
+
+.services-text {
+    font-size: 12px;
+    color: #008a4e;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
 form {
     width: 100%;
-    max-width: 330px;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px 40px 12px 15px;
+    padding: 12px 45px 12px 15px;
     border: 1px solid #ced4da;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
     outline: none;
-    background-color: #fff;
-    transition: border-color 0.2s;
 }
 
 .input-group input:focus {
@@ -113,11 +102,11 @@ form {
 
 .input-group img {
     position: absolute;
-    right: 12px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     opacity: 0.6;
 }
@@ -128,7 +117,8 @@ form {
     font-size: 11px;
     color: #0056b3;
     text-decoration: none;
-    margin-bottom: 12px;
+    margin-top: -10px;
+    margin-bottom: 15px;
 }
 
 .forgot-link:hover {
@@ -141,11 +131,10 @@ form {
     background-color: #0056b3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s;
     margin-top: 5px;
 }
 
@@ -153,22 +142,17 @@ form {
     background-color: #004085;
 }
 
-/* Footer Links */
 .footer-links {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
     font-size: 12px;
     color: #333;
+    width: 100%;
 }
 
 .footer-links a {
     color: #0056b3;
     text-decoration: none;
-    font-weight: 500;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
 }
 
 .new-account {
@@ -176,29 +160,10 @@ form {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 12px;
     color: #008a4e;
     font-weight: bold;
     cursor: pointer;
-}
-
-/* Responsive Design for Mobile Devices */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .left-bg {
-        display: none; /* Mobile screen par background image hide ho jaye gi taaki form clear dikhe */
-    }
-
-    .right-container {
-        width: 100%;
-        height: 100vh;
-        padding: 20px;
-    }
 }
 EOF
