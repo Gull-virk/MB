@@ -1,63 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCB Live - Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <!-- Left Side Background Image -->
-    <div class="left-bg"></div>
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
 
-    <!-- Right Side Login Section -->
-    <div class="right-container">
+/* Left Side Background */
+.left-bg {
+    flex: 1;
+    background: url('bg.jpg') no-repeat center center/cover;
+}
 
-        <!-- Main Header: Golden pkg for you -->
-        <div class="header-badge">
-            🌟 Golden pkg for you
-        </div>
+/* Right Side Container */
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #ffffff;
+    position: relative;
+}
 
-        <!-- Sub Header: Report Time 24 Hours -->
-        <div class="sub-badge">
-            ⏱️ Report Time: 24 Hours
-        </div>
+/* Top Branding: MCB Live Sabse Upar */
+.brand-title-top {
+    font-size: 26px;
+    color: #00A651;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
-        <!-- Logo & Branding -->
-        <img src="logo.png" alt="MCB Live Logo" class="logo">
-        <p class="welcome-text">Welcome to</p>
-        <h2 class="brand-title">MCB Live</h2>
-        <span class="explore-services">📂 Explore Services</span>
+.welcome-text {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
 
-        <!-- Login Form -->
-        <form>
-            <div class="input-group">
-                <input type="text" placeholder="Username" required>
-                <img src="user.svg" alt="User Icon">
-            </div>
-            <a href="#" class="forgot-link">Forgot Username?</a>
+/* Golden Package Header Badge */
+.header-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
 
-            <div class="input-group">
-                <input type="password" id="password" placeholder="Password" required>
-                <img src="eye-off.svg" id="togglePassword" alt="Toggle Password">
-            </div>
-            <a href="#" class="forgot-link">Forgot Password?</a>
+/* Report Time Sub-Badge */
+.sub-badge {
+    background-color: #f1f3f5;
+    color: #333;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
 
-            <button type="submit" class="login-btn">Login</button>
-        </form>
+/* Form Styles */
+form {
+    width: 100%;
+    max-width: 320px;
+}
 
-        <!-- Bottom Options -->
-        <div class="footer-links">
-            <p>Not Registered Yet? <a href="#">Register for MCB Live</a></p>
-            <div class="new-account">
-                <img src="logo.png" alt="Icon" width="16">
-                <span>Open New MCB Account</span>
-            </div>
-        </div>
+.input-group {
+    position: relative;
+    margin-bottom: 12px;
+}
 
-    </div>
+.input-group input {
+    width: 100%;
+    padding: 11px 40px 11px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.input-group input:focus {
+    border-color: #0056b3;
+}
+
+.input-group img {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #0056b3;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 11px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #004085;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.footer-links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.new-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #00A651;
+    font-weight: bold;
+    cursor: pointer;
+}
