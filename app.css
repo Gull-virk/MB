@@ -1,0 +1,16 @@
+@theme inline {
+  --color-mcb-blue: var(--mcb-blue);
+  --color-mcb-blue-dark: var(--mcb-blue-dark);
+  --color-mcb-green: var(--mcb-green);
+  --color-mcb-cyan: var(--mcb-cyan);
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  /* ...baaki tokens... */
+}
+
+:root {
+  --mcb-blue: #0a4a8f;
+  --mcb-blue-dark: #003a75;
+  --mcb-green: #4aa728;
+  --mcb-cyan: #79c8ea;
+  /* ...baaki tokens... */
+}
